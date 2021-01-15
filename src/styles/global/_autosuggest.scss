@@ -1,0 +1,111 @@
+@import '../index.scss';
+
+.rbt-input-hint input {
+    padding: 0 12px !important;
+    height: 30px !important;
+    line-height: 1.35 !important;
+}
+
+.react-autosuggest__container {
+    position: relative;
+}
+
+.react-autosuggest__input {
+    border-radius: 6px;
+    width: 100%;
+    height: 32px;
+    background-color: $white;
+    align-items: center;
+    margin-bottom: 8px;
+    border: 1px solid $black-5;
+    padding: 4px 12px;
+    display: block;
+    font-size: 14px;
+    line-height: 1.35;
+    color: $black-1;
+    outline: none;
+    box-sizing: border-box;
+
+    &.hasError {
+        border: 1px solid $error-1;
+    }
+
+    &::-webkit-input-placeholder {
+        /* Edge */
+        color: $black-4;
+    }
+
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: $black-4;
+    }
+
+    &::placeholder {
+        color: $black-4;
+    }
+
+    &:focus {
+        border-color: $black-2;
+        outline: none;
+    }
+    &:disabled {
+        color: $black-3;
+        background-color: $black-7;
+    }
+}
+
+.react-autosuggest__input--focused {
+    outline: none;
+}
+
+.react-autosuggest__suggestions-container {
+    display: none;
+}
+
+.react-autosuggest__suggestions-container--open {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: $black-1;
+    text-align: left;
+    list-style: none;
+    background-color: $white;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    top: 0;
+    transform: translate3d(0px, 33px, 0px);
+    width: 100%;
+}
+
+.react-autosuggest__suggestions-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    font-size: 12px;
+    line-height: 16px;
+    overflow: hidden;
+}
+
+.react-autosuggest__suggestion--highlighted {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}

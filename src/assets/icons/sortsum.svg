@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.8">
+        <g id="03-01-04-group-copy" transform="translate(-1311.000000, -263.000000)" fill="#AAB2B7">
+            <g id="Group-3" transform="translate(252.000000, 244.000000)">
+                <g id="Group-8" transform="translate(1008.000000, 15.000000)">
+                    <g id="Controls/Table-Sorting" transform="translate(51.000000, 4.000000)">
+                        <g id="Sorting-Control">
+                            <polygon id="Arrow-Down" fill-rule="nonzero" points="6 5.79671653 3 9.59671653 0 5.79671653"></polygon>
+                            <polygon id="Arrow-Up" fill-rule="nonzero" transform="translate(3.000000, 1.900000) rotate(-180.000000) translate(-3.000000, -1.900000) " points="6 0 3 3.8 0 0"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

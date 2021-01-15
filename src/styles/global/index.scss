@@ -1,0 +1,419 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/tooltip';
+@import '~bootstrap/scss/dropdown';
+@import '~react-datepicker/src/stylesheets/datepicker';
+@import '~bootstrap/scss/spinners';
+
+@import '~react-bootstrap-typeahead/css/Typeahead';
+
+@import '../settings/index';
+@import '../mixins/index';
+@import 'type';
+@import 'font';
+@import 'datepicker';
+@import 'autosuggest';
+
+/* stylelint-disable-next-line selector-max-id */
+html,
+body,
+#root {
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    @include for-mobile() {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    font-size: 14px;
+}
+
+body {
+    background-color: $bg-color-page;
+    font-family: $sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0;
+    min-width: 1024px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-rendering: auto;
+    word-wrap: break-word;
+
+    @include for-mobile {
+        height: auto;
+        min-width: 320px;
+        overflow: auto;
+    }
+
+    @media screen and (max-device-width: 1024px) {
+        padding: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb:vertical,
+    ::-webkit-scrollbar-thumb:horizontal {
+        height: 16px;
+        width: 16px;
+    }
+}
+
+a {
+    color: $secondary-1;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 16px;
+    transition: color 150ms ease;
+
+    &.link-in-text {
+        font-size: 14px;
+    }
+
+    &.decorated-link {
+        text-decoration: underline;
+    }
+
+    &:hover {
+        color: $secondary-3;
+        text-decoration: none;
+    }
+
+    &.disabled-link {
+        color: $secondary-4;
+        pointer-events: none;
+    }
+
+    &.external-link {
+        color: $primary-1;
+        &:hover {
+            color: $primary-3;
+        }
+    }
+
+    &.button-link {
+        color: $black-1;
+        &:hover {
+            color: $black-3;
+        }
+    }
+
+    &.muted {
+        color: $black-4;
+        &:hover {
+            color: $black-3;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+b {
+    font-weight: 500;
+}
+
+.menu-icon {
+    stroke: #bbc1c5;
+
+    &.icon-filled {
+        stroke: none;
+        fill: #bbc1c5;
+    }
+}
+
+.icon-isActive {
+    .menu-icon {
+        stroke: #08a652;
+
+        &.icon-filled {
+            stroke: none;
+            fill: #08a652;
+        }
+    }
+}
+
+.dropdown-item {
+    display: inline-flex;
+    min-width: 100%;
+    width: auto;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: $primary-1;
+}
+
+mark {
+    background-color: $primary-5;
+}
+
+button {
+    outline: none;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+div[role='button'] {
+    outline: none;
+    cursor: pointer;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.rbt-input-hint {
+    display: none !important;
+}
+
+.onboarding__wrapper {
+    height: 100%;
+
+    [class^='table_row__actionBtn'] {
+        opacity: 1;
+    }
+}
+
+.text-error {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: $error-6;
+}
+
+.m-1 {
+    margin: 4px !important;
+}
+
+.mt-1,
+.my-1 {
+    margin-top: 4px !important;
+}
+
+.mr-1,
+.mx-1 {
+    margin-right: 4px !important;
+}
+
+.mb-1,
+.my-1 {
+    margin-bottom: 4px !important;
+}
+
+.ml-1,
+.mx-1 {
+    margin-left: 4px !important;
+}
+
+.m-2 {
+    margin: 8px !important;
+}
+
+.mt-2,
+.my-2 {
+    margin-top: 8px !important;
+}
+
+.mr-2,
+.mx-2 {
+    margin-right: 8px !important;
+}
+
+.mb-2,
+.my-2 {
+    margin-bottom: 8px !important;
+}
+
+.ml-2,
+.mx-2 {
+    margin-left: 8px !important;
+}
+
+.m-3 {
+    margin: 16px !important;
+}
+
+.mt-3,
+.my-3 {
+    margin-top: 16px !important;
+}
+
+.mr-3,
+.mx-3 {
+    margin-right: 16px !important;
+}
+
+.mb-3,
+.my-3 {
+    margin-bottom: 16px !important;
+}
+
+.ml-3,
+.mx-3 {
+    margin-left: 16px !important;
+}
+
+.m-4 {
+    margin: 24px !important;
+}
+
+.mt-4,
+.my-4 {
+    margin-top: 24px !important;
+}
+
+.mr-4,
+.mx-4 {
+    margin-right: 24px !important;
+}
+
+.mb-4,
+.my-4 {
+    margin-bottom: 24px !important;
+}
+
+.ml-4,
+.mx-4 {
+    margin-left: 24px !important;
+}
+
+.m-5 {
+    margin: 32px !important;
+}
+
+.mt-5,
+.my-5 {
+    margin-top: 32px !important;
+}
+
+.mr-5,
+.mx-5 {
+    margin-right: 32px !important;
+}
+
+.mb-5,
+.my-5 {
+    margin-bottom: 32px !important;
+}
+
+.ml-5,
+.mx-5 {
+    margin-left: 32px !important;
+}
+
+.prefix {
+    align-items: center;
+    display: inline-flex;
+    height: 32px;
+    padding: 0 16px;
+}
+
+.info-wrapper {
+    align-items: center;
+    display: flex;
+    min-height: 32px;
+    line-height: 16px;
+}
+
+.align-fix > div[class*='label'] {
+    align-items: center;
+    display: flex;
+    min-height: 32px;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+.rc-slider.rc-slider-with-marks {
+    padding-bottom: 48px !important;
+
+    .rc-slider-handle {
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 3, 0.15),
+            0 1px 2px 0 rgba(0, 0, 2, 0.15);
+        border: solid 1px #d0d7dd;
+        height: 24px;
+        margin-top: -10px;
+        width: 24px;
+    }
+
+    .rc-slider-dot {
+        visibility: hidden;
+    }
+
+    .rc-slider-track {
+        background-color: $primary-1;
+    }
+
+    .rc-slider-mark-text {
+        font-size: 14px;
+        width: 40px;
+    }
+}
+
+.d-none-empty {
+    &:empty {
+        display: none !important;
+    }
+}
+
+.link {
+    color: $primary-1;
+    cursor: pointer;
+    &:hover {
+        color: $primary-3;
+    }
+}
+
+.blocked {
+    background: $error-5;
+}
+
+.disabled {
+    color: $black-3;
+}
+
+.tooltip {
+    .tooltip-inner {
+        background-color: $black-2;
+    }
+}
+
+.bs-tooltip-top {
+    .arrow::before {
+        border-top-color: $black-2;
+    }
+}
+
+.bs-tooltip-right {
+    .arrow::before {
+        border-right-color: $black-2;
+    }
+}
+
+.bs-tooltip-left {
+    .arrow::before {
+        border-left-color: $black-2;
+    }
+}
+
+.bs-tooltip-bottom {
+    .arrow::before {
+        border-bottom-color: $black-2;
+    }
+}

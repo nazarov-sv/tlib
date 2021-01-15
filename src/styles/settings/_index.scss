@@ -1,0 +1,31 @@
+@import '../constants/index';
+
+$grid-gutter-width: 24px;
+$body-color: $black-1;
+$menu-color: $black-3;
+$font-size-base: 1rem;
+$line-height-base: 1.35;
+
+$sans-serif: SBSansUI, Roboto, Arial, PT_sans, sans-serif;
+
+$media-laptop: 1365px; // old 1366
+$media-mobile: 1023px;
+
+$body-min-width: 1024px;
+$content-max-width: 1400px;
+$header-height: 60px;
+$sidebar-width: 224px;
+
+$checkbox-size: 20px;
+$radio-size: 16px;
+
+$bg-color-main: $white;
+$bg-color-content: $black-7;
+$bg-color-page: $black-8;
+$bg-color-section: $black-7;
+
+$animation-play-time: 150ms;
+$animation-play-time-double: 300ms;
+$animation-timing-function: ease;
+$base-animation: $animation-play-time $animation-timing-function;
+$double-animation: $animation-play-time-double $animation-timing-function;

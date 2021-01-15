@@ -1,0 +1,87 @@
+@import '../constants/colors';
+
+// Media
+@mixin for-laptop {
+    @media screen and (max-width: $media-laptop) {
+        @content;
+    }
+}
+
+@mixin for-mobile($point: $media-mobile) {
+    @media screen and (max-width: $point) {
+        @content;
+    }
+}
+
+@mixin hack-for-ie {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        @content;
+    }
+}
+
+// Mixins
+@mixin with-layout-shadow {
+    box-shadow: 0 1px 10px 0 rgba($shadow-1, 0.15), 0 0 15px 0 $shadow-2;
+}
+
+@mixin flex($grow: 0, $shrink: 0, $basis: auto) {
+    flex-grow: $grow;
+    flex-shrink: $shrink;
+    flex-basis: $basis;
+}
+
+@mixin text-overflow($width: 200px) {
+    max-width: $width;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+// Blocks
+@mixin checkbox {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+
+    & + label::after {
+        content: none;
+    }
+}
+
+@mixin overlay {
+    max-width: 1344px;
+    width: calc(100vw - 280px);
+    height: calc(100vh - 194px);
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    z-index: 1;
+
+    @include for-laptop {
+        width: calc(100vw - 56px);
+    }
+}
+
+@mixin input-field-sizes {
+    &--extra-small {
+        max-width: 79px;
+
+        input {
+            min-width: 100%;
+        }
+    }
+
+    &--small {
+        max-width: 158px;
+    }
+    &--medium {
+        max-width: 196px;
+    }
+    &--large {
+        max-width: 424px;
+    }
+    &--default {
+        max-width: 520px;
+    }
+}
